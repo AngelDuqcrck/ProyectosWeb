@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,500;0,9..40,600;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400&family=Dancing+Script:wght@600&family=Oswald&display=swap');
+*{
+    font-family: "DM Sans";
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Seccion Inicio */
+.logo {
+    font-size: 2.5rem;
+}
+
+/* Sección Inicio */
+.inicio {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/fondo.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding: 0 20px; /* Reducir el relleno en pantallas pequeñas */
+    text-align: center; /* Centrar el contenido en pantallas pequeñas */
+}
+
+.inicio .contenido {
+    max-width: 1400px;
+    margin: auto;
+    padding: 15px;
+}
+
+
+/* Estilos para el logo "Duq crack" en pantallas pequeñas */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    }
+}
+
+.inicio .contenido header{
+    padding: 40 px;
+}
+
+.logo {
+    
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Ajustar estilos de la imagen de perfil en la sección de inicio */
+.inicio .contenido .foto img {
+    max-width: 100%; /* Asegurar que la imagen de perfil se ajuste al ancho de su contenedor */
+}
+
+
+/* Estilo para el logo "Duq crack" */
+.logo{
+    font-family: "Dancing Script";
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 0 0 35px #fff;
+}
+.color {
+    font-family: "Dancing Script";
+    color: #4cb742; /* Cambia el color del texto "crack" */
+}
+
+.inicio .contenido .foto{
+    position: relative;
+}
+.inicio .contenido .info{
+    text-align: left;
+    padding: 0 1px;
+    max-width: 100%;
+}
+.inicio .contenido .foto img{
+    max-width: 200px;
+    border-radius: 50%;
+    border: 5px  #1313d4;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+}
+
+/* Estilos para la sección "Sobre mi" */
+.sobreMi {
+    padding: 200px 0 80px 0;
+    background-color: #f5f5f5; /* Color de fondo */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+.sobreMi .contenido {
+    max-width: 800px;
+    margin: auto;
+}
+
+.sobreMi h2 {
+    font-family: "Dancing Script";
+    font-size: 2rem; /* Tamaño de fuente para el título */
+    color: #610e8d; /* Color del título */
+    margin-bottom: 5px; /* Margen inferior del título */
+}
+
+.sobreMi h3 {
+    font-size: 1.5rem; /* Tamaño de fuente para los subtítulos */
+    color: #333; /* Color del subtítulo */
+    margin-top: 0px; /* Margen superior del subtítulo */
+}
+
+.sobreMi p {
+    font-size: 1.2rem; /* Tamaño de fuente para el texto */
+    color: #666; /* Color del texto */
+}
+
+/* Estilos para la sección "Áreas de Interés" */
+.aInteres {
+    background-image: url("/images/fondo2.jpg"); /* Fondo morado */
+    color: #fff; /* Texto blanco */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.aInteres .contenido {
+    max-width: 800px;
+    margin: auto;
+}
+
+.aInteres h2 {
+    font-family: "Dancing Script";
+    font-size: 2.5rem; /* Tamaño de fuente para el título */
+    color: #fff; /* Color del título */
+    margin-bottom: 20px; /* Margen inferior del título */
+}
+
+.aInteres h4 {
+    font-size: 1.5rem; /* Tamaño de fuente para el subtítulo */
+    color: #9cb1bc; /* Color del subtítulo (azul claro) */
+    margin: 10px 0; /* Margen superior e inferior del subtítulo */
+}
+
+/* Estilos para la sección "Áreas de Interés" */
+.aInteres {
+    background-color: #4b3e72; /* Fondo morado */
+    color: #fff; /* Texto blanco */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.aInteres .contenido {
+    max-width: 800px;
+    margin: auto;
+}
+
+.aInteres h2 {
+    font-family: "Dancing Script";
+    font-size: 2.5rem; /* Tamaño de fuente para el título */
+    color: #fff; /* Color del título */
+    margin-bottom: 20px; /* Margen inferior del título */
+}
+
+.aInteres h4 {
+    font-size: 1.5rem; /* Tamaño de fuente para el subtítulo */
+    color: #85c1e0; /* Color del subtítulo  */
+    margin: 15px 0; /* Margen superior e inferior del subtítulo */
+}
+
+/* Estilos para las columnas de áreas de interés */
+.aInteres .fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.aInteres .col {
+    flex: 1; /* Ocupa un espacio igual en la fila */
+    background-color: #907ad7; /* Fondo morado claro */
+    border: 1px solid #645684; /* Borde de las columnas */
+    padding: 20px; /* Espacio interior de cada columna */
+    text-align: center;
+    border-radius: 10px; /* Borde redondeado de las columnas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+/* Estilos para los íconos */
+.col i {
+    font-size: 3rem; /* Tamaño del ícono */
+    color: #ffffff; /* Color morado oscuro */
+    margin-bottom: 20px; /* Margen inferior del ícono */
+}
+
+/* Estilos para los títulos */
+.aInteres .titulo-detalle {
+    font-size: 1.8rem; /* Tamaño del título */
+    color: #010d8e; /* Color morado oscuro */
+    margin-bottom: 15px; /* Margen inferior del título */
+}
+
+/* Estilos para los párrafos de descripción */
+.aInteres .col p {
+    font-size: 1.2rem; /* Tamaño del texto */
+    color: #fff; /* Color del texto blanco */
+}
+
+
+
+/* Contenedor principal de la sección de proyectos */
+.proyectos {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 80px 0;
+}
+
+/* Título de la sección */
+.proyectos h2 {
+    font-family: "Dancing Script";
+    font-size: 2rem;
+    color: #610e8d;
+    margin-bottom: 20px;
+}
+
+/* Descripción de la sección */
+.proyectos p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+
+
+/* Título de proyectos completados */
+.completados h1 {
+    font-size: 1.5rem;
+    color: #4b3e72;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de proyectos completados */
+.completados {
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente los proyectos */
+}
+
+/* Contenedor de cada proyecto */
+.col {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+    transition: transform 0.2s;
+    margin: 0 20px 20px 0; /* Añade margen a la derecha y abajo de cada proyecto */
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del contenido a columnas */
+    align-items: center; /* Centra verticalmente el contenido */
+    text-align: center; /* Centra horizontalmente el texto */
+}
+
+/* Efecto de aumento al pasar el ratón sobre un proyecto */
+.col:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de las imágenes de proyecto */
+.col .foto img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Título de proyecto */
+.titulo-detalle {
+    font-family: "Dancing Script";
+    font-size: 1.8rem;
+    color: #4b3e72;
+    margin-top: 20px;
+}
+
+/* Descripción de proyecto */
+.col p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Iconos de proyectos completados */
+.col .foto i {
+    font-size: 2.5rem;
+    color: #4b3e72;
+    margin-right: 20px;
+}
+
+
+/* Contenedor de proyectos en proceso */
+.proceso {
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    max-width: 800px; /* Limita el ancho de los proyectos */
+    margin-bottom: 40px;
+}
+
+/* Título de proyectos en proceso */
+.proceso h1 {
+    font-size: 1.5rem;
+    color: #4b3e72;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de cada proyecto */
+.col {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+    transition: transform 0.2s;
+    margin: 0 0 20px 0; /* Espacio entre los proyectos */
+}
+
+/* Estilos para la sección "Hobbies" */
+.hobbies {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/fondo2.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hobbies .contenido {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Título de la sección "Hobbies" */
+.hobbies h2 {
+    font-family: "Dancing Script";
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Subtítulo de la sección "Hobbies" */
+.hobbies h4 {
+    font-size: 1.5rem;
+    color: #85c1e0;
+    margin: 15px 0;
+}
+
+/* Contenedor de las filas de hobbies */
+.hobbies .fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Contenedor de cada hobby */
+.hobbies .col {
+    flex: 1;
+    background-color: #4b3e72;
+    border: 1px solid #645684;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para los títulos de los hobbies */
+.hobbies .titulo {
+    font-family: "Dancing Script";
+    font-size: 1.8rem;
+    color: #fff;
+    margin-top: 15px;
+}
+
+/* Estilos para las imágenes de los hobbies */
+.hobbies .col img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+
+/* Estilos para la sección "Contacto" */
+.contacto {
+    background-color: #f2f2f2; /* Cambia el color de fondo a uno más suave */
+    padding: 60px 0; /* Espacio interno superior e inferior */
+
+    text-align: center;
+}
+
+.contacto .contenido {
+    max-width: 800px;
+    margin: auto;
+}
+
+.contacto h2 {
+    font-family: "Dancing Script";
+    font-size: 2.5rem;
+    color: #610e8d;
+    margin-bottom: 20px;
+}
+
+.contacto p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 40px; /* Mayor espacio inferior */
+}
+
+.contacto h3 {
+    font-size: 1.8rem; /* Tamaño del subtítulo */
+    color: #4b3e72;
+    margin-bottom: 10px; /* Menos espacio inferior */
+}
+
+/* Estilos para los enlaces de redes sociales */
+.redes a {
+    font-size: 2rem; /* Tamaño de los iconos */
+    color: #333; /* Color de los íconos de redes sociales */
+    margin: 0 15px; /* Espacio horizontal entre los íconos */
+    text-decoration: none;
+    transition: color 0.3s; /* Transición suave al pasar el mouse */
+}
+
+.redes a:hover {
+    color: #1449bc; /* Color al pasar el mouse */
+}
+
