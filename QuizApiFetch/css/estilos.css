@@ -10,90 +10,11 @@ html{
 }
 
 .inicio {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/fondo.jpg");
+    /*background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/fondo.jpg");*/
     max-height: 520px;
     background-size: cover;
     background-position: center center;
-    color: #fff;
+    color: #000;
     padding: 0 20px; /* Reducir el relleno en pantallas pequeñas */
     text-align: center; /* Centrar el contenido en pantallas pequeñas */
-}
-
-/* Estilos para la sección infocol */
-.infocol {
-    background-color: #f4f4f4;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos para el título "Información de Colombia" */
-.infocol h1 {
-    font-size: 24px;
-    margin: 0 0 20px;
-    color: #000000;
-}
-
-/* Estilos para el contenido de Colombia */
-#colombia-info {
-    font-size: 16px;
-    color: #000000;
-}
-
-/* Estilos para la sección de inicio */
-.inicio {
-    text-align: justify;
-}
-
-/* Estilos para el título principal "Colombia" */
-.inicio h1 {
-    text-align: center;
-    font-size: 36px;
-    color: #333;
-}
-
-/* Estilos para el subtítulo "Todo lo que necesitas conocer" */
-.inicio h2 {
-    text-align: center;
-    font-size: 18px;
-    color: #000000;
-}
-
-/* Estilos para la sección de regiones */
-.regiones {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.regiones .info {
-    text-align: justify;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.regiones h1 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.regiones h2 {
-    color: #666;
-    font-size: 18px;
-}
-
-.regiones ul {
-    list-style: disc;
-    color: #444;
-    font-size: 16px;
-    margin-left: 20px;
-    padding: 0;
-}
-
-.regiones ul li {
-    margin: 5px 0;
 }
