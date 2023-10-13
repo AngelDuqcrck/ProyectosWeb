@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Obtén el ID del departamento desde la URL (ejemplo: sitios.html?departmentId=123)
     const urlParams = new URLSearchParams(window.location.search);
     const departmentId = urlParams.get("departmentId");
 

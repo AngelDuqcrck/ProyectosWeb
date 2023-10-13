@@ -27,15 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         regionesList.innerHTML = "";
         data.forEach(function (region) {
             const regionItem = document.createElement("li");
-            const regionButton = document.createElement("button");
-            regionButton.textContent = "Departamentos de la Region " + region.name;
-            regionButton.classList.add("btn", "btn-primary");
-            regionButton.addEventListener("click", () => {
-                const regionId = this.getAttribute("data-id");
-                window.location.href = `regiones.html?regionId=${regionId}`;
-            });
-            regionItem.innerHTML = `<strong>${region.name}:</strong> ${region.description || "Sin descripción"} <br>`;
-            regionItem.appendChild(regionButton);
+            regionItem.innerHTML = `<strong> Region ${region.name} <br></strong> ${region.description || "Sin descripción"} <br>`;
             regionesList.appendChild(regionItem);
 
 
