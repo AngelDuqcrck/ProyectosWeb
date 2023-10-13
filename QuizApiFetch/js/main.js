@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
             regionButton.textContent = "Departamentos de la Region " + region.name;
             regionButton.classList.add("btn", "btn-primary");
             regionButton.addEventListener("click", () => {
-                window.location.href = `departamentos.html?regionId=${region.id}`;
+                const regionId = this.getAttribute("data-id");
+                window.location.href = `regiones.html?regionId=${regionId}`;
             });
             regionItem.innerHTML = `<strong>${region.name}:</strong> ${region.description || "Sin descripción"} <br>`;
             regionItem.appendChild(regionButton);
@@ -42,36 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         
 
-    }
-    //Funcion para mostrar los departamentos por region natural
-    function displayDepartment(data) {
-
-        departamentList.innerHTML = "";
-        data.forEach(function (department) {
-
-            const departmentItem = document.createElement("li");
-            const departmentButton = document.createElement("button");
-            departmentButton.textContent = "Sitios turisticos de " + department.name;
-            departmentButton.classList.add("btn", "btn-primary");
-            departmentButton.addEventListener("click", () => {
-                window.location.href = `sitios.html?departmentId=${department.id}`;
-            });
-            departmentItem.innerHTML = `<strong>${department.name}:</strong> ${department.description || "Sin descripción"} <br>`;
-                departmentItem.appendChild(departmentButton);
-                departamentList.appendChild(departmentItem);
-
-        });
-
-        departmentButton.addEventListener("click", () => {
-            fetch(`https://api-colombia.com/api/v1/Department`)
-                .then((response) => response.json())
-                .then((departamentosData) => {
-                    displayDepartment(departamentosData);
-                })
-                .catch((error) => {
-                    console.error("Error al cargar los departamentos", error);
-                });
-        });
     }
     // Realiza una solicitud GET a la API para cargar la información de Colombia
     fetch("https://api-colombia.com/api/v1/country/Colombia")

@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+     const urlParams = new URLSearchParams(window.location.search);
+    const departmentId = urlParams.get("departmentId");
     // Realiza una solicitud GET a la API para cargar los departamentos
     fetch("https://api-colombia.com/api/v1/Department")
         .then((response) => response.json())
