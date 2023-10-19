@@ -17,9 +17,15 @@ body {
 .contenido {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 5px;
 }
 
+.navbar-text{
+    font-family: 'Oswald', sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 5px 0;
+}
 h1, h2 {
     font-family: 'Oswald', sans-serif;
     color: #333;
