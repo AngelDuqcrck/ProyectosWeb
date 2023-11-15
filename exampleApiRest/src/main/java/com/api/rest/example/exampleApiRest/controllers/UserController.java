@@ -1,9 +1,12 @@
 package com.api.rest.example.exampleApiRest.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.api.rest.example.exampleApiRest.services.UserService;
@@ -30,6 +33,37 @@ public class UserController {
             }
         } catch (IllegalArgumentException e) {
             response.setMessage("Error: " + e.getMessage());
+        }
+
+        return response;
+    }
+
+    @PutMapping("/update")
+    public Response updateUser (@RequestParam Integer userId, @RequestBody UserDTO userDTO){
+        Response response =new Response();
+        try {
+            UserDTO updatedUser  = userService.updateUser(userDTO, userId);
+            if (updatedUser != null) {
+                response.setMessage("User updated successfully");
+            } else {
+                response.setMessage("Unexpected error while user was created");
+            }
+        } catch (IllegalArgumentException e) {
+            response.setMessage("Error" + e.getMessage());
+        }
+
+        return response;
+    }
+
+    @DeleteMapping("/delete")
+    public Response deleteUser(@RequestParam Integer userId){
+        Response response = new Response();
+
+        try {
+            userService.deleteUser(userId);
+            response.setMessage("User deleted successfully");
+        } catch (IllegalArgumentException e) {
+            response.setMessage("Error while user was deleted");
         }
 
         return response;
