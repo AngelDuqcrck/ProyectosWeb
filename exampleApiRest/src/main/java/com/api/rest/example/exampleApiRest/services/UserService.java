@@ -1,5 +1,8 @@
 package com.api.rest.example.exampleApiRest.services;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,4 +48,30 @@ public class UserService {
         userRepository.delete(foundUser);
 
     }
+
+    public UserDTO getUserById(Integer userId) {
+      UserDTO userDTO = new UserDTO();
+        User userOptional= userRepository.findById(userId)
+        .orElseThrow(() -> new IllegalArgumentException("User not found"));
+                 
+        BeanUtils.copyProperties(userOptional,userDTO  );
+        return userDTO;
+    }
+     
+     /**
+     * @return
+     */
+
+     public List<UserDTO>listUser(){
+        List<User>users=userRepository.findAll();
+        return users.stream()
+        .map(this::converEntityToDTO)
+        .collect(Collectors.toList());
+             
+     }
+     private UserDTO converEntityToDTO(User user){
+        UserDTO userDTO = new UserDTO();
+        BeanUtils.copyProperties(user, userDTO);
+        return userDTO;
+     }
 }

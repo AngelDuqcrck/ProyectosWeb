@@ -1,7 +1,11 @@
 package com.api.rest.example.exampleApiRest.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -68,4 +72,15 @@ public class UserController {
 
         return response;
     }
+
+    @GetMapping ("/id")
+    public UserDTO getUserById(@RequestParam Integer userId) {
+        return userService.getUserById(userId);
+    }
+
+      @GetMapping
+      public List<UserDTO>listUser(){
+        return userService.listUser();
+    }
+
 }
